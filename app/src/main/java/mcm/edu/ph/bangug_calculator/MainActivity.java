@@ -49,25 +49,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()){
             case R.id.btnAdd:
-                txtAnswer = txtVariable1 + txtVariable2;
-                txtAns.setText(Double.toString(txtAnswer));
+                txtAns.setText(add(txtVariable1, txtVariable2));
                 break;
             case R.id.btnSubtract:
-                txtAnswer = txtVariable1 - txtVariable2;
-                txtAns.setText(Double.toString(txtAnswer));
+                txtAns.setText(subtract(txtVariable1, txtVariable2));
                 break;
             case R.id.btnMultiply:
-                txtAnswer = txtVariable1 * txtVariable2;
-                txtAns.setText(Double.toString(txtAnswer));
+                txtAns.setText(multiply(txtVariable1, txtVariable2));
                 break;
             case R.id.btnDivide:
-                txtAnswer = txtVariable1 / txtVariable2;
-                txtAns.setText(Double.toString(txtAnswer));
+                txtAns.setText(divide(txtVariable1, txtVariable2));
                 break;
             case R.id.btnModulo:
-                txtAnswer = txtVariable1 % txtVariable2;
-                txtAns.setText(Double.toString(txtAnswer));
+                txtAns.setText(modulo(txtVariable1, txtVariable2));
                 break;
         }
     }
+    String add(double var1, double var2){return String.valueOf(var1 + var2);}
+    String subtract(double var1, double var2){return String.valueOf(var1 - var2);}
+    String multiply(double var1, double var2){return String.valueOf(var1 * var2);}
+    String divide(double var1, double var2){return String.valueOf(var1 / var2);}
+    String modulo(double var1, double var2){return String.valueOf(var1 % var2);}
 }
